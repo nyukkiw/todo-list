@@ -1,5 +1,2 @@
-[build]
-builder = "heroku/buildpacks:20"
-
 [env]
 PHP_EXTENSIONS = "mysqli pdo pdo_mysql"
