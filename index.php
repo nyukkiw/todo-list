@@ -2,7 +2,7 @@
 require 'functions.php';
 session_start();
 // koneksi ke DBMS
-$conn=mysqli_connect("localhost","root","","todo");
+// $conn=mysqli_connect("localhost","root","","todo");
 $userID=$_SESSION['user_id'];
 
 $todos=query("SELECT * FROM todos WHERE user_id='$userID'");

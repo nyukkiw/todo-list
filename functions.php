@@ -1,18 +1,7 @@
 <?php
 //koneksi ke data base
 //host name,username,pass,database name
-$host = getenv("MYSQLHOST");
-$user = getenv("MYSQLUSER");
-$pass = getenv("MYSQLPASSWORD");
-$db   = getenv("MYSQLDATABASE");
-$port = getenv("MYSQLPORT");
-
-$conn = mysqli_connect($host, $user, $pass, $db, $port);
-
-if (!$conn) {
-    die("Koneksi gagal: " . mysqli_connect_error());
-}
-
+$conn=mysqli_connect("mysql.railway.internal","root","ZetBrQBgrTZoqDCddVZNVrWPzHvvGVkt","railway");
 
 function query($query){
     global $conn;
