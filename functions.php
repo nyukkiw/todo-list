@@ -1,17 +1,18 @@
 <?php
 //koneksi ke data base
 //host name,username,pass,database name
-$conn = mysqli_connect(
-    getenv("MYSQLHOST"),
-    getenv("MYSQLUSER"),
-    getenv("MYSQLPASSWORD"),
-    getenv("MYSQLDATABASE"),
-    getenv("MYSQLPORT")
-);
+$host = getenv("MYSQLHOST");
+$user = getenv("MYSQLUSER");
+$pass = getenv("MYSQLPASSWORD");
+$db   = getenv("MYSQLDATABASE");
+$port = getenv("MYSQLPORT");
+
+$conn = mysqli_connect($host, $user, $pass, $db, $port);
 
 if (!$conn) {
     die("Koneksi gagal: " . mysqli_connect_error());
 }
+
 
 function query($query){
     global $conn;
